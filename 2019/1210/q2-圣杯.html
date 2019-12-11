@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>圣杯布局</title>
+    <style type="text/css">
+        body{
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            height: 500px;
+            padding: 0 200px;
+            min-width: 600px;
+        }
+        .container div{
+            float: left;
+            height: 100%;
+        }
+        .container .left{
+            background: aqua;
+            width: 200px;
+            position: relative;
+            left: -200px;
+            margin-left: -100%;
+        }
+        .container .right{
+            background: brown;
+            width: 200px;
+            position: relative;
+            left: 200px;
+            margin-left: -200px;
+        }
+        .content{
+            width: 100%;
+            background: chocolate;
+        }
+
+        .clearfix::after{
+            content:'';
+            display: none;
+            clear: both;
+            visibility: hidden;
+            height: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container clearfix">
+        <div class="content"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>

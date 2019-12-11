@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>双飞翼布局</title>
+    <style type="text/css">
+        body{
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            height: 500px;
+        }
+        .container div{
+            float: left;
+        }
+        .container .left{
+            background: aqua;
+            height: 100%;
+            width: 200px;
+            margin-left: -100%;
+        }
+        .container .right{
+            background: brown;
+            width: 200px;
+            height: 100%;
+            margin-left: -200px;
+        }
+        .content-wrapper{
+            height: 100%;
+            width: 100%;
+            background: chocolate;
+
+        }
+        .content-wrapper .content{
+            margin: 0 200px;
+        }
+
+        .clearfix::after{
+            content:'';
+            display: none;
+            clear: both;
+            visibility: hidden;
+            height: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container clearfix">
+        <div class="content-wrapper">
+            <div class="content"></div>
+        </div>
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>
