@@ -1,8 +1,8 @@
 # Q1.HTML全局属性(global attribute)有哪些（包含H5）？？
 # A1：
 * id,class,data-*,title,style,hidden,
-* ``找到的答案：
-$\color{rgba(255, 82, 82, 0.8)}{
+* 找到的答案：
+$$    
     accesskey:设置快捷键
     class:为元素设置类标识
     contenteditable:指定元素内容是否可编辑
@@ -19,12 +19,13 @@ $\color{rgba(255, 82, 82, 0.8)}{
     tabindex:设置元素可以获得焦点，通过tab导航
     title:规定元素有关的额外信息
     translate:元素和子孙节点内容是否需要本地化（均不支持）
-}$
+$$
 
 # Q2:在页面上隐藏元素的方法有哪些？
 # A2：
 * display:none, visibility:hidden, opacity:0, <div hidden></div>,
-$\color{rgba(255, 82, 82, 0.8)}{
+* 找到的答案：
+$$
 占位:
     visibility: hidden;
     margin-left: -100%;
@@ -34,14 +35,13 @@ $\color{rgba(255, 82, 82, 0.8)}{
     display: none;
     width: 0; height: 0; overflow: hidden;
 仅对块内文本元素:
-
     text-indent: -9999px;
     font-size: 0;
- }$
+$$
 
 # Q3.去除字符串中最后一个指定的字符
 # A3： 其实觉得最好用的应该是正则。但是动态的字符 这个正则我不会写。 所以就这样写了
-```
+```javascript
     //str,letter均为字符串
     function removeLastLetter(str, letter){
         let lastIndex = str.lastIndexOf(letter);
@@ -56,12 +56,10 @@ $\color{rgba(255, 82, 82, 0.8)}{
         }
     }
 ```
-$\color{rgba(255, 82, 82, 0.8)}{
-```
+```javascript
     // 在issue里找到了。
     function delLast(str,target) {
         let reg =new RegExp(`${target}(?=([^${target}]*)$)`)
         return str.replace(reg,'')
     }
 ```
-}$
