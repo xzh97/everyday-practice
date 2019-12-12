@@ -1,7 +1,7 @@
 # Q1.html的元素有哪些（包含H5）？
 # A1：
 * 块级元素: div, p ,h1-h6, ul，dl，dd，dt，li，header，footer，section，canvas，video，audio，aside, article,
-* 行内元素：span, a, **button, input**等
+* 行内元素：span, a, **button**等
 * 行内块:img，input, ~~button~~
 
 # Q2.CSS3有哪些新增的特性？
