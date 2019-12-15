@@ -8,3 +8,16 @@
 # Q2.圣杯布局和双飞翼布局
 
 # Q3.用递归算法实现，数组长度为5且元素的随机数在2-32间不重复的值
+```javascript
+    function randomArr(arr = []){
+        if(arr.length >= 5){
+            console.log(arr);
+            return ;
+        }
+        else{
+            let num = ~~(Math.random() * 30 + 2);
+            arr.indexOf(num) === -1 && arr.push(num);
+            randomArr(arr);
+        }
+    }
+```
